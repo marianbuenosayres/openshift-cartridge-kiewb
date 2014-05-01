@@ -9,8 +9,8 @@ SCANCONFIG=""
 
 source $KIEWB_BIN_DIR/util
 
-cartridge_type="bpms"
-KIEWB_version="6.0.1"
+cartridge_type="kiewb"
+KIEWB_version="6.1.0"
 
 # Debugging purposes
 DEBUG=1
@@ -111,7 +111,7 @@ function waitondeployments() {
     fi
 }
 
-# Check if the bpms process is running
+# Check if the kiewb process is running
 function isrunning() {
     
     # Debugging

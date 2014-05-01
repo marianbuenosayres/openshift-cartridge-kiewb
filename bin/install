@@ -50,13 +50,11 @@ set_env_var DISABLE_OPENSHIFT_MANAGED_SERVER_CONFIG true ~/.env/user_vars
 # Set usernames, generate passwords and create env variables
 echo 'Generating username and password'
 
-bpmadmin_username=bpm-admin
-bpmanalyst_username=bpm-analyst
-bpmdeveloper_username=bpm-developer
-bpmuser_username=bpm-user
-bpmmanager_username=bpm-manager
-root_username=root
-loan_username=loan
+bpmadmin_username=p3-admin
+bpmanalyst_username=p3-analyst
+bpmdeveloper_username=p3-developer
+bpmuser_username=p3-user
+bpmmanager_username=p3-manager
 
 
 bpmadmin_password=$(generate_password)
@@ -64,8 +62,6 @@ bpmanalyst_password=$(generate_password)
 bpmdeveloper_password=$(generate_password)
 bpmuser_password=$(generate_password)
 bpmmanager_password=$(generate_password)
-root_password=$(generate_password)
-loan_password=$(generate_password)
 
 # env vars
 #
@@ -84,13 +80,10 @@ echo "$bpmuser_password" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_BPMUSER_PASS
 echo "$bpmmanager_username" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_BPMMANAGER_USERNAME
 echo "$bpmmanager_password" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_BPMMANAGER_PASSWORD
 
-echo "$root_username" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_ROOT_USERNAME
-echo "$root_password" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_ROOT_PASSWORD
-
 echo "$bpmdeveloper_username" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_BPMDEVELOPER_USERNAME
 echo "$bpmdeveloper_password" > $OPENSHIFT_KIEWB_DIR/env/OPENSHIFT_KIEWB_BPMDEVELOPER_PASSWORD
 
-# Create the bpms-security-users.properties file
+# Create the kiewb-security-users.properties file
 KIEWB_USERS_PATH="${OPENSHIFT_KIEWB_DIR}/template/${OPENSHIFT_KIEWB_CONFIG_PATH}/${OPENSHIFT_KIEWB_USERS_FILE}"
 echo "# username=password" > $KIEWB_USERS_PATH
 echo "${bpmadmin_username}=${bpmadmin_password}" >> $KIEWB_USERS_PATH
@@ -98,11 +91,9 @@ echo "${bpmanalyst_username}=${bpmanalyst_password}" >> $KIEWB_USERS_PATH
 echo "${bpmdeveloper_username}=${bpmdeveloper_password}" >> $KIEWB_USERS_PATH
 echo "${bpmuser_username}=${bpmuser_password}" >> $KIEWB_USERS_PATH
 echo "${bpmmanager_username}=${bpmmanager_password}" >> $KIEWB_USERS_PATH
-echo "${root_username}=${root_password}" >> $KIEWB_USERS_PATH
 echo "${bpmdeveloper_username}=${bpmdeveloper_password}" >> $KIEWB_USERS_PATH
-echo "${loan_username}=${loan_password}" >> $KIEWB_USERS_PATH
 
-# Create the bpms-security-roles.properties file
+# Create the kiewb-security-roles.properties file
 KIEWB_ROLES_PATH="${OPENSHIFT_KIEWB_DIR}/template/${OPENSHIFT_KIEWB_CONFIG_PATH}/${OPENSHIFT_KIEWB_ROLES_FILE}"
 echo "# username=role1,role2" > $KIEWB_ROLES_PATH
 echo "${bpmadmin_username}=admin" >> $KIEWB_ROLES_PATH
@@ -110,8 +101,6 @@ echo "${bpmanalyst_username}=analyst" >> $KIEWB_ROLES_PATH
 echo "${bpmdeveloper_username}=developer" >> $KIEWB_ROLES_PATH
 echo "${bpmuser_username}=user" >> $KIEWB_ROLES_PATH
 echo "${bpmmanager_username}=manager" >> $KIEWB_ROLES_PATH
-echo "${root_username}=admin" >> $KIEWB_ROLES_PATH
-echo "${loan_username}=analyst,broker,manager,appraiser" >> $KIEWB_ROLES_PATH
 
 # Create temporary symlinks from <EAP_HOME>/standalone/configuration to users and roles files.
 # This files cannot be linked from $OPERNSHIFT_REPO_DIR yet because this repository is not initialized yet.
@@ -143,7 +132,7 @@ pushd $OPENSHIFT_KIEWB_DIR/standalone/configuration/initial > /dev/null
 popd 1> /dev/null
 
 client_result ""
-client_result "Red Hat JBoss BPM Suite ${version} cartridge installed.  Please make note of these credentials:"
+client_result "KIE Workbench ${version} cartridge installed.  Please make note of these credentials:"
 client_result ""
 client_result "             KIEWB Admin User: $bpmadmin_username"
 client_result "                    Password: $bpmadmin_password"
@@ -159,12 +148,6 @@ client_result "                    Password: $bpmuser_password"
 client_result ""
 client_result "           KIEWB Manager User: $bpmmanager_username"
 client_result "       KIEWB Manager Password: $bpmmanager_password"
-client_result ""
-client_result "               BAM Root User: $root_username"
-client_result "                    Password: $root_password"
-client_result ""
-client_result "            BPM Example User: $loan_username"
-client_result "                    Password: $loan_password"
 client_result ""
 client_result "Configuration files: "
 client_result "- You can add/modify/show/remove users and roles using the following files in your cartridge git repository:"

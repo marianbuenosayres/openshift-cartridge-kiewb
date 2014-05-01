@@ -1,3 +1,3 @@
-The OpenShift `BPMS` cartridge documentation can be found at:
+The KIE Workbench cartridge documentation can be found at:
 
-https://github.com/jboss-bpms/openshift-cartridge-bpms
+https://github.com/marianbuenosayres/openshift-cartridge-kiewb

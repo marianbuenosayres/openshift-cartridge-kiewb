@@ -2,18 +2,19 @@
 <module xmlns="urn:jboss:module:1.0" name="org.drools">
   <resources>
 
-<resource-root path="drools-templates-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-decisiontables-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-scorecards-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-core-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-persistence-jpa-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-compiler-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-guided-dtable-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-datamodel-api-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-commons-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-guided-template-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-test-scenarios-6.0.2-redhat-6.jar"/>
-<resource-root path="drools-workbench-models-guided-scorecard-6.0.2-redhat-6.jar"/>
+<resource-root path="drools-templates-6.1.0.Beta2.jar"/>
+<resource-root path="drools-decisiontables-6.1.0.Beta2.jar"/>
+<resource-root path="drools-scorecards-6.1.0.Beta2.jar"/>
+<resource-root path="drools-core-6.1.0.Beta2.jar"/>
+<resource-root path="drools-pmml-6.1.0.Beta2.jar"/>
+<resource-root path="drools-persistence-jpa-6.1.0.Beta2.jar"/>
+<resource-root path="drools-compiler-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-guided-dtable-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-datamodel-api-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-commons-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-guided-template-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-test-scenarios-6.1.0.Beta2.jar"/>
+<resource-root path="drools-workbench-models-guided-scorecard-6.1.0.Beta2.jar"/>
 
   </resources>
   <dependencies>

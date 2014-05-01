@@ -2,20 +2,21 @@
 <module xmlns="urn:jboss:module:1.0" name="org.jbpm">
   <resources>
 
-<resource-root path="jbpm-executor-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-persistence-jpa-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-human-task-core-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-bpmn2-emfextmodel-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-workitems-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-human-task-workitems-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-kie-services-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-bpmn2-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-flow-builder-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-runtime-manager-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-audit-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-shared-services-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-flow-6.0.2-redhat-6.jar"/>
-<resource-root path="jbpm-human-task-audit-6.0.2-redhat-6.jar"/>
+<resource-root path="jbpm-executor-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-persistence-jpa-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-human-task-core-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-human-task-jpa-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-bpmn2-emfextmodel-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-workitems-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-human-task-workitems-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-kie-services-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-bpmn2-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-flow-builder-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-runtime-manager-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-audit-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-shared-services-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-flow-6.1.0.Beta2.jar"/>
+<resource-root path="jbpm-human-task-audit-6.1.0.Beta2.jar"/>
 <resource-root path="META-INF"/>
 
   </resources>
