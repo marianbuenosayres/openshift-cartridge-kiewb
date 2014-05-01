@@ -8,14 +8,10 @@
   <version>6.0.1</version>
   <packaging>pom</packaging>
   <modelVersion>4.0.0</modelVersion>
-  <name>Red Hat JBoss BPM Suite Cartridge</name>
-  <description>RedHat JBoss BPM Suite cartridge for OpenShift</description>
+  <name>KIE Workbench deployed Cartridge</name>
+  <description>KIE Workbench cartridge for OpenShift</description>
   <properties>
-    <!-- TODO: Current version used is 6.0.1.GA, that is not available at this server. -->
-    <kiewb-archive-url>http://dev138.mw.lab.eng.bos.redhat.com</kiewb-archive-url>
-    <kiewb-archive-name>jboss-bpms-6.0.1.GA-redhat-3-deployable-eap6.x.zip</kiewb-archive-name>    
-    <kiewb-archive-path>candidate/bpms-6.0.1.CR1/${kiewb-archive-name}</kiewb-archive-path>
-    <kiewb-version-target>6.0.1</kiewb-version-target>
+    <kiewb-version-target>6.1.0</kiewb-version-target>
   </properties>
   <scm>
     <connection>scm:git:git://github.com:marianbuenosayres/openshift-cartridge-kiewb.git</connection>
@@ -53,102 +49,6 @@
       <timezone>-3</timezone>
     </developer>
   </developers>
-
-  <build>
-    <plugins>
-	<plugin>
-	  <artifactId>maven-clean-plugin</artifactId>
-	  <version>2.5</version>
-	  <!-- Removes jboss folder contents from specified version folder -->
-	  <configuration>
-	    <filesets>
-              <fileset>
-	      <directory>../versions/${kiewb-version-target}</directory>
-	      <includes>
-	        <include>jboss/**</include>
-	      </includes>
-              <excludes>
-	        <exclude>jboss/modules/system/layers/base/**</exclude>
-	      </excludes>
-	      <excludes>
-	        <exclude>jboss/jboss-modules.jar</exclude>
-	      </excludes>
-	      <followSymlinks>false</followSymlinks>
-            </fileset>
-	    </filesets>
-	  </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>wagon-maven-plugin</artifactId>
-        <version>1.0-beta-3</version>
-        <executions>
-	    <!--Downloads the DV archive into the build target folder -->
-            <execution>
-                <id>download-kiewb-zip</id>
-                <phase>initialize</phase>
-                <goals>
-                    <goal>download-single</goal>
-                </goals>
-                <configuration>
-                    <url>${kiewb-archive-url}</url>
-                    <fromFile>${kiewb-archive-path}</fromFile>
-                    <toDir>${project.build.directory}</toDir>
-                </configuration>
-            </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>truezip-maven-plugin</artifactId>
-        <version>1.1</version>
-        <executions>
-  	  <!--Extracts the modules from zip and puts them in target version jboss location -->
-          <execution>
-            <id>copy-from-zip</id>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <phase>process-resources</phase>
-            <configuration>
-              <fileset>
-                <directory>${project.build.directory}/${kiewb-archive-name}/jboss-eap-6.1</directory>
-                <includes>
-                  <include>modules/system/layers/**</include>
-                  <!--<include>jboss-modules.jar</include>-->
-                </includes>
-                <outputDirectory>${project.build.directory}/../../versions/${kiewb-version-target}/jboss/</outputDirectory>
-              </fileset>
-            </configuration> 
-          </execution>
-  	  <!--Copies remaining modules (mysql and postgres drivers) from modules folder into target version jboss modules -->
-          <execution>
-            <id>copy-modules</id>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <phase>process-resources</phase>
-            <configuration>
-              <fileset>
-                <directory>${project.build.directory}/../modules</directory>
-                <includes>
-                  <include>**</include>
-                </includes>
-                <outputDirectory>${project.build.directory}/../../versions/${kiewb-version-target}/jboss/modules/system/layers/base</outputDirectory>
-              </fileset>
-              <fileset>
-                <directory>${project.build.directory}/../modules</directory>
-                <includes>
-                  <include>layers.conf</include>
-                </includes>
-                <outputDirectory>${project.build.directory}/../../versions/${kiewb-version-target}/jboss/modules</outputDirectory>
-              </fileset>
-            </configuration> 
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
 

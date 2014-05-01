@@ -1,4 +1,4 @@
-## Red Hat JBoss BPM Suite Cartridge for OpenShift
+## KIE Workbench Cartridge for OpenShift
 
 Summary
 -------
@@ -92,7 +92,7 @@ When you install the cartridge, several users and roles are created. Their passw
 1.- Maven build for the developer cartridge git repository maven project     
     Build performed when pushing data into the cartridge git repository     
 2.- Maven build for the KIE Workbench webapp projects    
-    Build performed when user hints <code>Build&Deploy</code> button in BPMS application     
+    Build performed when user hints <code>Build&Deploy</code> button in KIE Workbench application     
 
 * Both maven processes uses same Maven settings file available in your cartridge repository at location  <code>.openshift/config/settings.xml</code>
 * User can use this Maven settings file to take control of the configuration for Maven builds, such as adding or removing external repositories. 
@@ -116,9 +116,9 @@ These are the steps:
 
 2.- When executing the above command, a list of forwarded ports will be visible. This ports are forwarded until you finish the rhc client process (executed using <code>port-forward</code> argument). So DO NOT close this terminal until the application repository is fully cloned.     
 
-3.- Once OpenShift application ports are forwarded, you can run <code>git clone</code> using this URL: <code>ssh://&lt;app_user&gt;@127.0.0.1:9521/&lt;app_name&gt;</code> (NOTE that the user for the ssh connection is not a system user, is a BPMS application user)     
+3.- Once OpenShift application ports are forwarded, you can run <code>git clone</code> using this URL: <code>ssh://&lt;app_user&gt;@127.0.0.1:9521/&lt;app_name&gt;</code> (NOTE that the user for the ssh connection is not a system user, is a KIE WB application user)     
 
-This is an example of cloning a application repository named _test-repo_ using a BPMS application user with login _p3-admin_. The application name is _test-app_:
+This is an example of cloning a application repository named _test-repo_ using a KIE Workbench application user with login _p3-admin_. The application name is _test-app_:
 
     rhc port-forward test-app
     git clone ssh://p3-admin@127.0.0.1:9521/test-repo

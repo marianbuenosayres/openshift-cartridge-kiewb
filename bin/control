@@ -301,7 +301,7 @@ function deploy() {
   # Debugging
   doDebug "Executing: control - deploy"
   
-  echo "Deploying JBoss BPM Suite"
+  echo "Deploying KIE Workbench"
 
   # if repo/deployments has any files in it, sync them to $KIEWB_DEPLOYMENTS_DIR
   # and delete any files in $KIEWB_DEPLOYMENTS_DIR that don't exist in
