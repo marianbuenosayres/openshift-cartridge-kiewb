@@ -1,10 +1,10 @@
 Name: kiewb
 Cartridge-Short-Name: KIEWB
-Display-Name: Red Hat JBoss BPM Suite 6
-Description: Red Hat JBoss BPM Suite is a comprehensive platform for business process management.
-Version: '6.0.1'
+Display-Name: KIE Workbench app
+Description: KIE Workbench app is a comprehensive platform for business process management.
+Version: '6.1.0'
 License: LGPL
-License-Url: http://www.gnu.org/copyleft/lesser.txt
+License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
 Vendor: Red Hat
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: jboss
