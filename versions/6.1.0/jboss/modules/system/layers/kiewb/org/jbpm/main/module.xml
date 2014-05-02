@@ -8,7 +8,6 @@
 <resource-root path="jbpm-bpmn2-emfextmodel-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-workitems-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-human-task-workitems-6.1.0.Beta2.jar"/>
-<resource-root path="jbpm-kie-services-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-bpmn2-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-flow-builder-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-runtime-manager-6.1.0.Beta2.jar"/>
