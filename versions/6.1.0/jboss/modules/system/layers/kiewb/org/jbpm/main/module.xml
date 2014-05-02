@@ -2,7 +2,6 @@
 <module xmlns="urn:jboss:module:1.0" name="org.jbpm">
   <resources>
 
-<resource-root path="jbpm-executor-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-persistence-jpa-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-human-task-core-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-human-task-jpa-6.1.0.Beta2.jar"/>
