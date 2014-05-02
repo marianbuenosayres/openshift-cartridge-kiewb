@@ -13,7 +13,6 @@
 <resource-root path="jbpm-flow-builder-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-runtime-manager-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-audit-6.1.0.Beta2.jar"/>
-<resource-root path="jbpm-shared-services-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-flow-6.1.0.Beta2.jar"/>
 <resource-root path="jbpm-human-task-audit-6.1.0.Beta2.jar"/>
 <resource-root path="META-INF"/>
