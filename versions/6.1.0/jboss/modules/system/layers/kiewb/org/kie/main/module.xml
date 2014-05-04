@@ -2,9 +2,9 @@
 <module xmlns="urn:jboss:module:1.0" name="org.kie">
   <resources>
 
-<resource-root path="kie-internal-6.0.2-redhat-6.jar"/>
-<resource-root path="kie-api-6.0.2-redhat-6.jar"/>
-<resource-root path="kie-ci-6.0.2-redhat-6.jar"/>
+<resource-root path="kie-internal-6.1.0.Beta2.jar"/>
+<resource-root path="kie-api-6.1.0.Beta2.jar"/>
+<resource-root path="kie-ci-6.1.0.Beta2.jar"/>
 
   </resources>
   <dependencies>
