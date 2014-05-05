@@ -5,7 +5,7 @@
                           http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd">
 
   <enterprise-beans>
-    <message-driven>
+    <!--message-driven>
       <ejb-name>KieSessionRequesMessageBean</ejb-name>
       <ejb-class>org.kie.services.remote.jms.RequestMessageBean</ejb-class>
       <transaction-type>Container</transaction-type>
@@ -53,6 +53,6 @@
           <activation-config-property-value>1</activation-config-property-value>
         </activation-config-property> 
       </activation-config>
-    </message-driven>  
+    </message-driven-->  
   </enterprise-beans>
 </ejb-jar>
