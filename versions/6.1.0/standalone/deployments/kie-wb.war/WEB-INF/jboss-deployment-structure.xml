@@ -62,7 +62,7 @@
      <module name="org.apache.helix" />
      <module name="org.apache.httpcomponents" />
      <module name="org.apache.james.mime4j" />
-     <module name="org.apache.lucene" />
+     <!--module name="org.apache.lucene" /-->
      <module name="org.apache.maven" />
      <module name="org.apache.maven.wagon" />
      <module name="org.apache.neethi" />
